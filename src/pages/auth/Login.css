@@ -1,0 +1,10 @@
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-btn {
+  margin-top: 25px;
+}
