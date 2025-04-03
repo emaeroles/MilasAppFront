@@ -1,4 +1,4 @@
-import { get } from '../../app/api/apiClient';
+import { fetchGet } from '../../app/api/apiClient';
 
 export type Kioscos = {
   IsSuccess: boolean;
@@ -21,7 +21,7 @@ export type Kioscos = {
 export default async function getKioscos(
   userId: string
 ): Promise<Kioscos | null> {
-  const response: Response | null = await get(
+  const response: Response | null = await fetchGet(
     '/kiosco/' + userId + '/get-actives'
   );
 

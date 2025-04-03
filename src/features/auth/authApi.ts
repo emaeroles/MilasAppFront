@@ -1,4 +1,4 @@
-import { post } from '../../app/api/apiClient';
+import { fetchPost } from '../../app/api/apiClient';
 
 export type AuthOutput = {
   Username: string;
@@ -18,7 +18,7 @@ export type AuthImput = {
 export default async function postAuth(
   authOutput: AuthOutput
 ): Promise<AuthImput | null> {
-  const response: Response | null = await post<AuthOutput>(
+  const response: Response | null = await fetchPost<AuthOutput>(
     '/auth/user',
     authOutput
   );
