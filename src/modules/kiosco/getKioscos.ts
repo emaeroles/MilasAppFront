@@ -1,4 +1,5 @@
 import { fetchGet } from '../../app/api/apiClient';
+import ENDPOINTS from '../../app/api/endpoints';
 
 export type Kioscos = {
   IsSuccess: boolean;
@@ -22,7 +23,7 @@ export default async function getKioscos(
   userId: string
 ): Promise<Kioscos | null> {
   const response: Response | null = await fetchGet(
-    '/kiosco/' + userId + '/get-actives'
+    ENDPOINTS.KIOSCOS.GET_ACTIVES(userId)
   );
 
   if (response?.status == 200) {

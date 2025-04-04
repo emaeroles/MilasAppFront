@@ -1,8 +1,6 @@
-const BASE_URL = import.meta.env.VITE_BASE_API_URL;
-
 export async function fetchGet(url: string): Promise<Response | null> {
   try {
-    return await fetch(BASE_URL + url, {
+    return await fetch(url, {
       method: 'GET',
       credentials: 'include',
     });
@@ -17,7 +15,7 @@ export async function fetchPost<T>(
   body: T
 ): Promise<Response | null> {
   try {
-    return await fetch(BASE_URL + url, {
+    return await fetch(url, {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -34,7 +32,7 @@ export async function fetchPut<T>(
   body: T
 ): Promise<Response | null> {
   try {
-    return await fetch(BASE_URL + url, {
+    return await fetch(url, {
       method: 'PUT',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -51,7 +49,7 @@ export async function fetchPatch<T>(
   body: T
 ): Promise<Response | null> {
   try {
-    return await fetch(BASE_URL + url, {
+    return await fetch(url, {
       method: 'PATCH',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -65,7 +63,7 @@ export async function fetchPatch<T>(
 
 export async function fetchTogglePost(url: string): Promise<Response | null> {
   try {
-    return await fetch(BASE_URL + url, {
+    return await fetch(url, {
       method: 'POST',
       credentials: 'include',
       headers: { 'Content-Type': 'application/json' },
@@ -78,7 +76,7 @@ export async function fetchTogglePost(url: string): Promise<Response | null> {
 
 export async function fetchDelete(url: string): Promise<Response | null> {
   try {
-    return await fetch(BASE_URL + url, {
+    return await fetch(url, {
       method: 'DELETE',
       credentials: 'include',
     });

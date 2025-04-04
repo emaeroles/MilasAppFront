@@ -1,0 +1,34 @@
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.login__title {
+  margin-top: 100px;
+  font-family: monospace;
+  font-size: 2.5rem;
+}
+
+.login__card {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.login__btn {
+  margin-top: 15px;
+}
+
+.login__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+}

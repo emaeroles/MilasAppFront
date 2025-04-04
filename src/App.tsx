@@ -1,10 +1,10 @@
-import './App.css';
-import Login from './pages/auth/Login';
+import './styles/App.css';
+import LoginPage from './modules/auth/LoginPage';
 
 function App() {
   return (
     <>
-      <Login />
+      <LoginPage />
     </>
   );
 }

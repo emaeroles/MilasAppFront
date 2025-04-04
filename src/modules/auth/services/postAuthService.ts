@@ -1,4 +1,5 @@
-import { fetchPost } from '../../app/api/apiClient';
+import { fetchPost } from '../../../app/api/apiClient';
+import ENDPOINTS from '../../../app/api/endpoints';
 
 export type AuthOutput = {
   Username: string;
@@ -6,7 +7,7 @@ export type AuthOutput = {
 };
 
 export type AuthImput = {
-  IsSuccess: boolean;
+  Status: number;
   Message: string;
   Data: {
     Id: string;
@@ -15,15 +16,15 @@ export type AuthImput = {
   };
 };
 
-export default async function postAuth(
+export default async function postAuthService(
   authOutput: AuthOutput
 ): Promise<AuthImput | null> {
   const response: Response | null = await fetchPost<AuthOutput>(
-    '/auth/user',
+    ENDPOINTS.AUTH.LOGIN,
     authOutput
   );
 
-  if (response?.status == 200) {
+  if (response != null) {
     return await response.json();
   }
 
