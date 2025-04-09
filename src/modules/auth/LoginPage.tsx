@@ -8,9 +8,9 @@ export default function LoginPage() {
   return (
     <>
       <div>
-        <p>{user.Id}</p>
-        <p>{user.Username}</p>
-        <p>{user.Email}</p>
+        <p>{user.id}</p>
+        <p>{user.username}</p>
+        <p>{user.email}</p>
       </div>
       <LoginView />
     </>

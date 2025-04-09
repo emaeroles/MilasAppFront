@@ -2,17 +2,17 @@ import { fetchPost } from '../../../app/api/apiClient';
 import ENDPOINTS from '../../../app/api/endpoints';
 
 export type AuthOutput = {
-  Username: string;
-  Password: string;
+  username: string;
+  password: string;
 };
 
 export type AuthImput = {
-  Status: number;
-  Message: string;
-  Data: {
-    Id: string;
-    Username: string;
-    Email: string;
+  status: number;
+  message: string;
+  data: {
+    id: string;
+    username: string;
+    email: string;
   };
 };
 

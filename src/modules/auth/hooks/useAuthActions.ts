@@ -7,10 +7,10 @@ export default function useAuthActions() {
   const dispatch = useAppDispatch();
 
   function login(username: string, password: string) {
-    const outhPut: AuthOutput = { Username: username, Password: password };
+    const outhPut: AuthOutput = { username: username, password: password };
     postAuthService(outhPut).then((response) => {
-      if (response != null && response.Status == 200) {
-        dispatch(addUser(response.Data));
+      if (response != null && response.status == 200) {
+        dispatch(addUser(response.data));
       }
     });
   }
